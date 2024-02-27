@@ -1,9 +1,9 @@
 
 # Create docker image and push into AWS ECR
 
-A brief description of what this project does and who it's for
+Crate dockerfile and build docker image. push docker image into AMAZON Elastic Container Registry.
 
-Step 1: Create docker file and run Docker Conatiner.
+### Step 1: Create docker file and run Docker Conatiner.
 
 &nbsp;1. Start docker desktop.
 
@@ -23,7 +23,7 @@ docker build -t dharmaraj257/hey-nodejs:0.0.1.RELEASE .
 ```
 docker container run -d -p 3000:3000 dharmaraj257/hey-nodejs:0.0.1.RELEASE 
 ```
-Step 2: Create Amazon Elastic Conatiner Registry
+### Step 2: Create Amazon Elastic Conatiner Registry
 
 &nbsp; 1. Go to Ecr service and click get started 
 
@@ -31,7 +31,7 @@ Step 2: Create Amazon Elastic Conatiner Registry
 
 &nbsp; 3. Create repository
 
-Step 3: Log in your aws account using aws cli.
+### Step 3: Log in your aws account using aws cli.
 ```
 aws configure 
 AWS Access Key ID [****************2G4Z]:
@@ -40,7 +40,7 @@ Default region name [us-east-1]:
 Default output format [json]: 
 ```
 
-Step 3: Push the docker image into ECR
+### Step 4: Push the docker image into ECR
 
 &nbsp; 1. Select created repository, click view push command and select windows 
 
@@ -60,3 +60,6 @@ docker tag docker-yml:latest account-id.dkr.ecr.us-east-1.amazonaws.com/docker-y
 ```
 docker push account-id.dkr.ecr.us-east-1.amazonaws.com/docker-yml:latest 
 ```
+OutPut:
+&nbsp;
+![ecr](https://github.com/dharmaraj257/Create-docker-image-and-push-into-AWS-ECR/assets/100831265/119b7f6b-be3c-49c7-a609-d4bd42171a7a)
